@@ -1,6 +1,6 @@
 language: java
 
-before install:
+before_install:
  - chmod +x gradlew
 
 jdk:
