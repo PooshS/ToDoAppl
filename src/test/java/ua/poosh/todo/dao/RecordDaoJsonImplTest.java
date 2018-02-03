@@ -14,7 +14,7 @@ public class RecordDaoJsonImplTest {
     Record record;
     RecordDaoJsonImpl recordDaoJson;
 
-   /* @Before
+    @Before
     public void SetUp(){
         record = new Record("111", false);
         record.setId("test");
@@ -72,6 +72,6 @@ public class RecordDaoJsonImplTest {
         updatedRecord = recordDaoJson.update(updatedRecord);
         assertNotEquals(record.getDone(), updatedRecord.getDone());
 
-    }*/
+    }
 
 }
