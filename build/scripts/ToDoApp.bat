@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\ToDoApp-1.0.1.jar;%APP_HOME%\lib\unirest-java-1.4.9.jar;%APP_HOME%\lib\gson-2.8.2.jar;%APP_HOME%\lib\json-simple-1.1.jar;%APP_HOME%\lib\httpclient-4.5.2.jar;%APP_HOME%\lib\httpasyncclient-4.1.1.jar;%APP_HOME%\lib\httpmime-4.5.2.jar;%APP_HOME%\lib\json-20160212.jar;%APP_HOME%\lib\httpcore-4.4.4.jar;%APP_HOME%\lib\commons-logging-1.2.jar;%APP_HOME%\lib\commons-codec-1.9.jar;%APP_HOME%\lib\httpcore-nio-4.4.4.jar
+set CLASSPATH=%APP_HOME%\lib\ToDoApp-1.0.1.jar;%APP_HOME%\lib\unirest-java-1.4.9.jar;%APP_HOME%\lib\gson-2.8.2.jar;%APP_HOME%\lib\json-simple-1.1.jar;%APP_HOME%\lib\slf4j-simple-1.7.25.jar;%APP_HOME%\lib\httpclient-4.5.2.jar;%APP_HOME%\lib\httpasyncclient-4.1.1.jar;%APP_HOME%\lib\httpmime-4.5.2.jar;%APP_HOME%\lib\json-20160212.jar;%APP_HOME%\lib\slf4j-api-1.7.25.jar;%APP_HOME%\lib\httpcore-4.4.4.jar;%APP_HOME%\lib\commons-logging-1.2.jar;%APP_HOME%\lib\commons-codec-1.9.jar;%APP_HOME%\lib\httpcore-nio-4.4.4.jar
 
 @rem Execute ToDoApp
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %TO_DO_APP_OPTS%  -classpath "%CLASSPATH%" todo.Server %CMD_LINE_ARGS%
