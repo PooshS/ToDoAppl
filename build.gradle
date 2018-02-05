@@ -9,7 +9,9 @@ version '1.0.1'
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'todo.Server'
+plugins "io.ratpack-groovy" version "1.4.5"
+
+mainClassName = 'ua.poosh.todo.Server'
 
 sourceCompatibility = 1.8
 
@@ -40,5 +42,6 @@ dependencies {
 }
 
 task stage {
-    dependsOn installDist
+    dependsOn test
+    dependsOn instalDist
 }
