@@ -64,7 +64,8 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/ToDoApp-1.0.1.jar:$APP_HOME/lib/unirest-java-1.4.9.jar:$APP_HOME/lib/gson-2.8.2.jar:$APP_HOME/lib/json-simple-1.1.jar:$APP_HOME/lib/slf4j-simple-1.7.25.jar:$APP_HOME/lib/httpclient-4.5.2.jar:$APP_HOME/lib/httpasyncclient-4.1.1.jar:$APP_HOME/lib/httpmime-4.5.2.jar:$APP_HOME/lib/json-20160212.jar:$APP_HOME/lib/slf4j-api-1.7.25.jar:$APP_HOME/lib/httpcore-4.4.4.jar:$APP_HOME/lib/commons-logging-1.2.jar:$APP_HOME/lib/commons-codec-1.9.jar:$APP_HOME/lib/httpcore-nio-4.4.4.jar
+CLASSPATH=$APP_HOME/app:$APP_HOME/lib/ToDoApp.jar:$APP_HOME/lib/ratpack-core-1.4.5.jar:$APP_HOME/lib/ratpack-groovy-1.4.5.jar:$APP_HOME/lib/unirest-java-1.4.9.jar:$APP_HOME/lib/gson-2.8.2.jar:$APP_HOME/lib/json-simple-1.1.jar:$APP_HOME/lib/slf4j-simple-1.7.25.jar:$APP_HOME/lib/netty-codec-http-4.1.6.Final.jar:$APP_HOME/lib/netty-handler-4.1.6.Final.jar:$APP_HOME/lib/netty-transport-native-epoll-4.1.6.Final-linux-x86_64.jar:$APP_HOME/lib/guava-19.0.jar:$APP_HOME/lib/reactive-streams-1.0.0.final.jar:$APP_HOME/lib/caffeine-2.3.1.jar:$APP_HOME/lib/javassist-3.19.0-GA.jar:$APP_HOME/lib/jackson-databind-2.7.5.jar:$APP_HOME/lib/jackson-dataformat-yaml-2.7.5.jar:$APP_HOME/lib/jackson-datatype-guava-2.7.5.jar:$APP_HOME/lib/snakeyaml-1.15.jar:$APP_HOME/lib/jackson-datatype-jdk8-2.7.5.jar:$APP_HOME/lib/jackson-datatype-jsr310-2.7.5.jar:$APP_HOME/lib/groovy-all-2.4.3.jar:$APP_HOME/lib/ratpack-guice-1.4.5.jar:$APP_HOME/lib/httpclient-4.5.2.jar:$APP_HOME/lib/httpasyncclient-4.1.1.jar:$APP_HOME/lib/httpmime-4.5.2.jar:$APP_HOME/lib/json-20160212.jar:$APP_HOME/lib/netty-codec-4.1.6.Final.jar:$APP_HOME/lib/netty-buffer-4.1.6.Final.jar:$APP_HOME/lib/netty-transport-4.1.6.Final.jar:$APP_HOME/lib/netty-common-4.1.6.Final.jar:$APP_HOME/lib/jackson-annotations-2.7.0.jar:$APP_HOME/lib/jackson-core-2.7.5.jar:$APP_HOME/lib/guice-4.1.0.jar:$APP_HOME/lib/guice-multibindings-4.1.0.jar:$APP_HOME/lib/httpcore-4.4.4.jar:$APP_HOME/lib/commons-logging-1.2.jar:$APP_HOME/lib/commons-codec-1.9.jar:$APP_HOME/lib/httpcore-nio-4.4.4.jar:$APP_HOME/lib/netty-resolver-4.1.6.Final.jar:$APP_HOME/lib/javax.inject-1.jar:$APP_HOME/lib/aopalliance-1.0.jar:$APP_HOME/lib/slf4j-api-1.7.25.jar
+cd "$APP_HOME/app"
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -112,7 +113,8 @@ fi
 # For Cygwin, switch paths to Windows format before running java
 if $cygwin ; then
     APP_HOME=`cygpath --path --mixed "$APP_HOME"`
-    CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
+    CLASSPATH=$APP_HOME/app:`cygpath --path --mixed "$CLASSPATH"`
+cd "$APP_HOME/app"
     JAVACMD=`cygpath --unix "$JAVACMD"`
 
     # We build the pattern for arguments to be converted via cygpath

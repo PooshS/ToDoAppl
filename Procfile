@@ -1,1 +1,1 @@
-web: build/install/ToDoApp/bin/build/install
+web: build/install/gradle-getting-started/bin/gradle-getting-started

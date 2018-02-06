@@ -1,23 +1,12 @@
-/*jar {
-    baseName = 'ToDoApp'
-    version = '1.0.1'
-}*/
-
-group 'PooshProj'
-version '1.0.1'
-
-apply plugin: 'java'
-apply plugin: 'application'
-
-plugins "io.ratpack-groovy" version "1.4.5"
-
-mainClassName = 'ua.poosh.todo.Server'
-
-sourceCompatibility = 1.8
+plugins {
+    id "io.ratpack.ratpack-groovy" version "1.4.5"
+}
 
 repositories {
     mavenCentral()
 }
+
+mainClassName = 'ua.poosh.todo.Server'
 
 dependencies {
     runtime "org.slf4j:slf4j-simple:1.7.25"
@@ -41,7 +30,13 @@ dependencies {
 
 }
 
+sourceSets {
+    main {
+        output.resourcesDir = "build/classes/main"
+    }
+}
+
 task stage {
     dependsOn test
-    dependsOn instalDist
+    dependsOn installDist
 }

@@ -1,6 +1,8 @@
-#.idea/
-#*.iml
-#*.class
+build
+.gradle
+.idea/
+*.iml
+*.class
 out/
 #target/
 build/
