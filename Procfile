@@ -1,1 +1,1 @@
-web: build/install/ToDoApp/bin/build/install
+web: build/install/ToDoApp/bin/ToDoApp

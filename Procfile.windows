@@ -1,1 +1,1 @@
-web: build\install\ToDoApp\bin\build\install.bat
+web: build\install\ToDoApp\bin\ToDoApp.bat
