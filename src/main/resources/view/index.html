@@ -121,9 +121,18 @@
 						data: JSON.stringify(obgct)
 					})
 					.then(function success(data) {
-						if (data && handler == "/show-all-records") {
 
-							toDoListBuild(data);
+						dataF = JSON.stringify({
+							"d9e-d094-42e1-9b4a-48f171a721f2": {
+							"id": "d9e-d094-42e1-9b4a-48f171a721f2",
+							"toDo": "222",
+							"done": true
+							}
+						})
+
+						if (dataF && handler == "/show-all-records") {
+
+							toDoListBuild(dataF);
 
 						}else if(data && handler == "/add-record"){
 
